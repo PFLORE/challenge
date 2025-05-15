@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "1c27089d-0661-4b53-b3a4-bc6c263b52f4",
+		"name": "CHALLENGE LVL3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7715698",
+		"_collection_link": "https://red-equinox-106291.postman.co/workspace/CHALLENGE~fbee3a7e-3f98-4e97-bb13-eaa6d12b1e83/collection/7715698-1c27089d-0661-4b53-b3a4-bc6c263b52f4?action=share&source=collection_link&creator=7715698"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"buy\": 3.55,\r\n  \"sell\": 2.60,\r\n  \"date\": \"2025-04-28T10:30:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/exchange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get realtime",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/exchange/realtime",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange",
+						"realtime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/exchange/HIGH?date=2025-04-28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exchange",
+						"HIGH"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2025-04-28"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

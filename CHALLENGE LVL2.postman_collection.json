@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "bc6f797e-34f4-4998-bb6f-8a63bb80e858",
+		"name": "CHALLENGE LVL2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7715698",
+		"_collection_link": "https://red-equinox-106291.postman.co/workspace/CHALLENGE~fbee3a7e-3f98-4e97-bb13-eaa6d12b1e83/collection/7715698-bc6f797e-34f4-4998-bb6f-8a63bb80e858?action=share&source=collection_link&creator=7715698"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"temperature\": 21.6,\r\n    \"timestamp\": \"2025-04-27T10:40:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/temperature",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temperature"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get daily",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/temperature/daily?date=2025-04-27&unit=C",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temperature",
+						"daily"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2025-04-27"
+						},
+						{
+							"key": "unit",
+							"value": "C"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get hourly",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/temperature/hourly?date=2025-04-27&unit=C",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temperature",
+						"hourly"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2025-04-27"
+						},
+						{
+							"key": "unit",
+							"value": "C"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
